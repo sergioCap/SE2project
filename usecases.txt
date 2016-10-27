@@ -1,0 +1,33 @@
+CASE 1
+The user opens the app and registers to the system
+the user enters the credit card number correctly
+the user receives a password by email
+
+
+CASE 2
+the user logs into the system entering his credentials
+the user enables GPS on his device to see available cars around
+the user picks one car
+a countdown on the screen starts to notice the user about the hour he has to reach the car
+the user reaches the car within the hour
+the user asks the system to unlock the car
+the system checks the distance between the user and the car (using gps)
+the system unlocks the car
+the user turns on the car
+a counter starts showing the charge
+the user parks the car in a safe area
+the user leaves the car
+the system charges the user
+the system locks the car
+
+
+
+CASE 3
+the user logs into the system entering his credentials
+the user enables GPS on his device to see available cars around
+the user picks one car
+a countdown on the screen starts to notice the user about the hour he has to reach the car
+the user exceeds the time limit
+the countdown ends
+the user is charged for 1EUR of fee
+the car is available again
