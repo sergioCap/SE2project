@@ -31,3 +31,28 @@ the user exceeds the time limit
 the countdown ends
 the user is charged for 1EUR of fee
 the car is available again
+
+---Erica---
+
+Actor "User" use cases:
+	1. register
+	2. login
+	3. reserve a car
+	4. use a car
+	5. unreserve a car
+	6. park
+	7. view available cars
+	8. view parking area
+	9. view power station
+	10. view energy level of a car
+	11. access money saving mode
+
+Actor "Management System" use cases:
+	1. provide information for money saving mode
+	2. calculate and apply discounts
+	3. pickup money
+	4. access cars informations
+		a. gps info
+		b. numer of person in the car
+		c. evergy level info
+
