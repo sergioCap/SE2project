@@ -1,0 +1,144 @@
+This document contains all Forum answers and possible solutions and thoughts 
+WE have. Last Update 28.10.2016 19.30
+
+Note Prof. Mottola said:
+For your project, you can either ask us (Elisabetta and I) here if you think 
+it is a major issue, or simply come up with realistic, feasible, and properly 
+motivated assumptions. The motivations will need to be part of the RASD anyways.
+
+______________________________________________________________________________
+#1 CONCERNING ACTORS OF OUR SYSTEM
+
+Professor Di Nitto says:
+Your system needs to have some operators otherwise your cars will soon 
+remain far away and with no battery. 
+You need at least to reason on this and then make a decision on what 
+you want to assume (interfaces for operators could be within the b
+oundaries of your software to be or they could be pre-existing ones, 
+and in this case you will need to understand how to interface with them...)
+
+Boundaries of the system are not always obvious. 
+We must not forget to identify and define them explicitly. 
+
+---
+MY THOUGHT
+I think we could assume that there are operators that do interventions or 
+check the status of cars and contact eventually the maintenance.
+
+I would suggest this to be part of the ASSUMPTIONS.
+
+---
+WHAT DO YOU THINK?
+
+Erica: _________
+Soheil: _________
+
+______________________________________________________________________________
+#2 CONCERNING PAYMENT METHODS
+
+Professor Mottola says:
+One issue is what happens when a user, for whatever reason, cannot complete a 
+payment. 
+The project description generally talks about "payment information", not about 
+(rechargeable) credit cards. 
+Have you negotiated with your customer that payments are only going to use 
+this means? 
+In any case, it is your job to come up with a reasonable set of assumptions 
+on how payments take place, and thus on the chances that a payment cannot 
+complete, if at all.
+
+The other issue is what to do with users unable to complete a payment sometime 
+in the past. 
+Preventing them from using the service for a given amount of time looks like a 
+reasonable option to me, as long as this remains consistent with the assumptions 
+you make to address the first issue.
+
+More than the specific details, I think this is a case that shows how fundamental 
+it is to separate out different concerns and to capture their relationships. 
+
+---
+MY THOUGHT
+As reported in the problem at point 6: "the system starts charging the user for 
+a given amount of money per minute; the user is notified of the current charge 
+through a screen on the car"
+
+I would avoid credit card as method for these reasons:
+- if there is not enough money at the end of the ride the system will never 
+know when to charge unless it tries many times until the user recharges its card;
+- how should the system behave in cases in which it discovers the user can't be 
+charged?
+
+My suggestion:
+I would use a "budget" function working this way:
+- the user charges an amount of money on his profile (using credit card payment 
+for example, like on Amazon or any other web shop);
+- once the user puts money on his profile the system already gets all the money;
+- on his profile the user knows the available amount;
+- after the ride there are two possibilities
+	1: money is enough (e.g. available 10 €, ride 3€, remaining 7€);
+	2: not enough money (available 10€, ride 11€, remaining -1€);
+- in case 1 everything is ok;
+- in case 2 the user has 7 days to recharge before being removed from the 
+service and being obliged to pay the missing money, also, user will be
+unable to reserve cars until the moment he recharges;
+
+This solves the problems described before concerning credit card (when to retry 
+payment? how to behave with the user?)
+
+---
+YOUR OPINIONS?
+
+Erica: _________
+Soheil: _________
+
+______________________________________________________________________________
+#3 CONCERNING TEMPORARY PARKING
+
+Name of topic: Temporary parking outside a safe area
+
+Professor Mottola says:
+It is entirely up to you to decide if and how to support this, even if it's not 
+explicitly listed in the project description. The important bit is to ensure 
+that whatever decision you take here does not impact any of the functionality 
+the customer is explicitly asking for, which are listed in the document. 
+The risk of introducing inconsistencies is always there. 
+
+---
+MY THOUGHT
+I would avoid this by only allowing pick the car - use it - park it.
+Users need again the car? 
+Open the app - search for cars - pick a car - use it - park it.
+
+WHY?
+It would complicate things, isn't it?
+
+---
+YOUR OPINIONS?
+
+Erica: _________
+Soheil: _________
+
+______________________________________________________________________________
+#4 CONCERNING SAFE PARKING AREAS
+
+Professor Di Nitto says:
+The document you have got from your customer says: "The set of safe areas for 
+parking cars is pre-defined by the management system". 
+So, it seems that your customer has clear ideas of what a safe area is and you 
+can make the assumption that at start-up time your system will be inizialized 
+with such a set of safe areas. Since the text is talking about "set" of areas, 
+we can imagine that it will be composed by a number of elements, not only one 
+as you are assuming when you consider the whole city as a safe area (of course, 
+we can have sets composed of a single element or not elements at all, but we 
+neeed to be able to handle also the general case). 
+What you have to understand is how your customer is providing information 
+about these areas. He/she could provide you with an address that corresponds 
+to the area or with a set of coordinates... 
+From our perspective, you are free to make your choice here and motivate and 
+document it in the RASD
+
+---
+What will we do? YOUR OPINIONS?
+
+Erica: _________
+Soheil: _________
