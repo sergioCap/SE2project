@@ -1,21 +1,21 @@
 Scenario 1
-Alice get out with friends but when she want to come back home there are no bus,
-so she decide to take a PowerEnjoy. She open the application (she's already logged in)
-and on the map she check for the closest available car. She find some and she decide
-to reserve one, that's 10 min from her by foot. When she arrive at the car, she
-press the button to pickit up and after a few seconds the car opens. She start
-driving. When she arrives home, she park in the first available parking space and
-press the button to notify she's leaving the car. She close the door and she wait
-till the car lock.
+Alice gets out with friends but when she wants to come back home there are no buses,
+so she decides to take a PowerEnjoy. She opens the application (she's already logged in)
+and on the map she checks for the closest available car. She finds some and she decides
+to reserve one, that's 10 min from her by feet. When she arrives at the car, she
+presses the button to pickit up and after a few seconds the car opens. She starts
+driving. When she arrives home, she parks in the first available parking space and
+presses the button to notify she's leaving the car. She closes the door and she waits
+till the car locks.
 
 unreserve possible?
 
 Scenario 2
-Rob have to go to a restaurant not easily reachable by public tranport.
-Then he decide to take a PowerEnjoy. He open the app and he notify that the closest
-available car is 10minuts from him by metro. He decide to take it anyway.
-Unlikely there are some traffic problems with the underground, then he decide to take
-take a bus to get to the car. At that time there are a lot of congestion in his
-town, and the bus is doing late. The level of the battery is low and when he get
-off the bus his phone turn off. Now Rob will not be able neighter to pick up the car
-nor to unrent the car, then he will pay 1€ fee.
+Rob has to go to a restaurant not easily reachable by public tranport.
+Then he decides to take a PowerEnjoy. He opens the app and he notifies that the closest
+available car is 10minutes from him by metro. He decides to take it anyway.
+Unlikely there are some traffic problems with the underground, then he decides to take 
+a bus to get to the car. At that time there is too much road congestion in his
+town, and the bus is late. The battery of his mobile phone is low and when he gets
+off the bus his phone turns off. Now Rob will not be able neighter to pick up the car
+nor to unrent the car, then he will pay 1â‚¬ fee.
