@@ -1,0 +1,54 @@
+GOAL PROPOSITIONS
+
+1. The user should be able to find available cars around him and to reserve one of them (1 or 2 goals?)
+	Requirements:
+	- The system can check user coordinates accessing GPS on user's phone
+	- The users sees a map on which cars are identified by a symbol showing on the correct position on the map
+	- The user can select one of the cars, see its status and reserve it
+	- The system should check whether the user can pay for the reservation before accepting it (PAYMENT METHOD OPTION)
+	- The system should provide an unlock code once the car is reached (OPTIONAL)
+	
+2. The user should be granted the access to the reserved car once he reaches it
+	Requirements:
+	- User can notify the system that he has reached the car
+	- The system can check user coordinates to compare them with car's ones
+	Alternative: 
+	- User can enter an unlock code on a display in order to open the car
+	- The system should ensure that the code entered by the user is correct in order to unlock the car
+	OBSERVATION: The alternative solution avoids the occurrence of the case of LOW BATTERY PHONE as suggested by ERICA in SCENARIO #2
+	
+3. The user should be allowed to cancel a reservation
+	Requirements:
+	- The system should offer to the user the option to cancel the reservation (a Cancel Reservation button on the app?)
+	- Once the reservation is canceled the user should be able to access again to reservations
+
+4. The cars which are not in the right use conditions should result as unavailable to the user
+	Requirements:
+	- The system may hide or show differently on the map unavailable cars for maintenance/low battery/other reasons
+	- The user shouldn't have the possibility to reserve them
+
+5. The user should see the status of a car to choose whether to reserve it or not
+	Requirement:
+	- The system provides informations about the car when the user picks one of the availables, before reserving it
+
+6. The user should be able to access payment method and make changes
+	Requirement:
+	- The system should provide a personal profile to the user with his informations and possibility to apply changes
+
+
+Other situation to evaluate. Are these assumptions, goals, requirements..?
+Distance limit: the user has a certain limit to move in the area. In case he exceeds it the system informs him (a sound in the car/a notification on the screen)
+and the system will keep on charging him until he parks in a safe area.
+
+Legal parking: the user is responsible for parking the car in non-authorized places, so he has to pay in case of fees.
+
+No money in e-wallet: the system does not authorise the user to take a car if his wallet is <= 0EUR.
+Alternative to e-wallet: before authorizing the user to reserve a car the system checks if the credit card is not blocked by the bank and if it is still valid, otherwise, the user won't be allowed to do the reservation.
+
+
+ASSUMPTIONS
+- The system always knows the position of a car by using GPS in real-time.
+- The user provides a copy of his ID card to subscribe to the service and also a copy of his driving licence (meaning that only +18 users with a driving licence can have access to the service)
+- The system already knows all safe parking areas and identifies them on the map using GPS signals
+- The system checks automatically the battery status of the car
+- The user interacts with the system through his mobile phone
