@@ -1,5 +1,5 @@
 This document contains all Forum answers and possible solutions and thoughts 
-WE have. Last Update 28.10.2016 19.30
+WE have. Last Update 29.10.2016 8.07 (#2)
 
 Note Prof. Mottola said:
 For your project, you can either ask us (Elisabetta and I) here if you think 
@@ -84,6 +84,11 @@ unable to reserve cars until the moment he recharges;
 
 This solves the problems described before concerning credit card (when to retry 
 payment? how to behave with the user?)
+
+ALTERNATIVE (update 29.10.2016): using credit card, the system checks if there
+is money available and if the card is valid when the user requires for 
+reservation. If the card is blocked by the bank, the system doesn't allow the 
+user to reserve.
 
 ---
 YOUR OPINIONS?
