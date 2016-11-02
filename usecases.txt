@@ -39,7 +39,7 @@ Actor "User" use cases:
 	2. login
 	3. reserve a car
 	4. use a car
-	5. unreserve a car
+	5. release a car
 	6. park
 	7. view available cars
 	8. view parking area
