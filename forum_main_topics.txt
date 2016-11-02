@@ -1,4 +1,4 @@
-This document contains all Forum answers and possible solutions and thoughts 
+﻿This document contains all Forum answers and possible solutions and thoughts 
 WE have. Last Update 29.10.2016 8.07 (#2)
 
 Note Prof. Mottola said:
@@ -30,7 +30,11 @@ I would suggest this to be part of the ASSUMPTIONS.
 ---
 WHAT DO YOU THINK?
 
-Erica: _________
+Erica: I think we could assume that another software outside our system (not under
+our control) checks the status of the cars and autonomously "fix" it. 
+Otherwise, since we have to check the status of the cars to made them "not available",
+we could like "send a signal" to the system outside that take in cherge it autonomously.
+since we
 Soheil: _________
 
 ______________________________________________________________________________
@@ -93,7 +97,19 @@ user to reserve.
 ---
 YOUR OPINIONS?
 
-Erica: _________
+Erica:I would avoid your first option..It's nice but it's like we're adding
+specification to our problem and I think it would become more complicated.
+About the ALTERNATIVE: what do you means for "blocked by the bank"? can we check that?
+Anyway we could use the real enjoy idea: if it is a pre-payed card, it "blocks" (like also booking do)
+a fixed amount of money (like 10€). if it's a normal credit card I don't know how it works..but since
+it's "credit" the bank allow him to go "under" the account.
+Anyway we could just think about what happen if the client cannot pay. It's an exception.
+I know that car2go start sending emails, letters and continue to try to get the money.
+After a certain amount of time the client is banned from the system. The client can also choose
+another way to pay. (how to check it?)
+I think the "payment world" could be an external system. We could just interface with
+it by sending signals like "take x€", and getting message like "operation successful",
+"operation fail n° y".
 Soheil: _________
 
 ______________________________________________________________________________
@@ -120,7 +136,9 @@ It would complicate things, isn't it?
 ---
 YOUR OPINIONS?
 
-Erica: _________
+Erica: The issue is the "temporary parking" or the "parking outside a safe area"?
+For the first one I'm completely agree with you. About the second one I would just "not allow"
+parking outside the safe area.
 Soheil: _________
 
 ______________________________________________________________________________
@@ -145,5 +163,6 @@ document it in the RASD
 ---
 What will we do? YOUR OPINIONS?
 
-Erica: _________
+Erica: In my mind I imagine a list of coordinate that correspond to the border of an area.
+(but what about if the area has the shape of a donut? :D )
 Soheil: _________
