@@ -11,7 +11,7 @@ USER GOALS
 2. Already registered users should be allowed to login
 	Requirements:
 	- The user should be allowed to enter login informations
-	- The system should validate entered data and allow the access if all is correct
+	- The system should validate entered data and allow the access if all is correct, otherwise it should inform the user
 
 3. The user should be able to find available cars around him
 	Requirements:
@@ -82,6 +82,5 @@ IS IT A GOAL?
 16. A user should be allowed to enable the money saving option
 	Requirements:
 	- The user should be allowed to require the money saving option
-	- The system should ask the final destination to the user and find the closest special parking area
-	- The system should reserve a power plug and make it unavailable to other users at the chosen station
-	- ...
+	- Given a final destination, the system should calculate and provide the closest special parking area according to the cars distribution on the network.
+	- The system should be able to check the status of the power plug, reserve one, and communicate which one to the user
