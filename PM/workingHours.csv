@@ -1,8 +1,11 @@
 Working hours;;;
-;;;;
-name;day;hours;description;
-Sergio Caprara;25/10/2016;2;starting meeting - how to;
-Soheil;25/10/2016;2;starting meeting with Sergio;
-Erica Tinti;27/10/2016;1.5;meeting with Sergio - alignment;
-Erica Tinti;28/10/2016;1;define use cases, first draft use case diagram, setting up repository;
-
+;;;
+name;day;hours;description
+Sergio Caprara;25/10/2016;2;starting meeting - how to
+Soheil;25/10/2016;2;starting meeting with Sergio
+Erica Tinti;27/10/2016;1.5;meeting with Sergio - alignment
+Erica Tinti;28/10/2016;1;define use cases, first draft use case diagram, setting up repository
+Erica Tinti;02/11/2016;2.5;give opinio on forum questions and meeting with the team
+Erica Tinti;03/11/2016;1.5;meet with sergio for defining requirements
+Erica Tinti;04/11/2016;2;meeting with sergio for requirements
+Erica Tinti;05/11/2016;4;work on use cases

@@ -25,15 +25,19 @@ The informations concerning driving licence and user names
 ---
 
 ###Name
-The System Picks up money from the client credit card
+Money Charging
 
 ####Participating actors
 System
 
 ####Entry Conditions
-The system has calculated the amount that the user have to pay
+The client has parked the car.
 
 ####Flow of events
+* The system checks the cars gps and energy informations
+* The system calculates the amount and apply the discount
+* The system tell the payment system to Picks up the final amount of money from the client credit card
+* The system communicate the final amount to the client
 
 ####Exit contitions
 The system has received a message from the external payment system that the payment has been completed successfully.
@@ -41,4 +45,3 @@ The system has received a message from the external payment system that the paym
 ####Exception
 The payment fails due to missing money on the credit card or blocked card. The system receive a failure message and communicate to the user a deadline for the payment and makes the user unable to reserve a car. If the user exceed the deadline, the system ban the account forever and delegate the problem to a debt collecting company.
 
-####Special Requirements
