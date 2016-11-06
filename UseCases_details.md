@@ -1,5 +1,19 @@
 ##Use Cases
 
+###Schema
+### Name
+
+#### Actors
+
+#### Entry Conditions
+
+#### Flow of events
+
+#### Exit conditions
+
+#### Exceptions
+---
+
 ###Name
 User registers to the system
 
@@ -39,6 +53,46 @@ The user has access to the map showing available cars in his area.
 
 ####Exceptions
 The user account does not exist, the system notifies the user and suggests to register in case he has not.
+
+---
+
+### Name
+View available cars on the map
+
+#### Actors
+User, System
+
+#### Entry Conditions
+The user is logged in
+
+#### Flow of events
+* (it's necessary that the system knows the position of the user and send ONLY the infos about the car close to him or it sends all the cars?)
+* view a map of the area around of the user position and show a pin with the symbol of a car in each position in which is parked an available car.
+* clicking on a pin, the details of that cars are showen: battery level and position. A button for reserving that car is showen.
+* A back button is available on the detail page
+
+#### Exit conditions
+The user click on the button to reserve a car or to the back button.
+
+---
+
+### Name
+Allow the user to reserve a car
+
+#### Actors
+User, System
+
+#### Entry Conditions
+The user open the detail of a car on the map
+
+#### Flow of events
+* In the detail of a car, the user press the button to reserve that car
+* The system mark that car as unavailable and start the countdown.
+* On the user application a new screen appear that shows the countdown, a button to release the car, a button to open the car. The car position is still shown.
+
+#### Exit conditions
+
+#### Exceptions
 
 ---
 
