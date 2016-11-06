@@ -67,12 +67,61 @@ The user is logged in
 
 #### Flow of events
 * (it's necessary that the system knows the position of the user and send ONLY the infos about the car close to him or it sends all the cars?)
+Sergio: I would suggest that the system checks user's position using GPS and shows an area around him on the map
 * view a map of the area around of the user position and show a pin with the symbol of a car in each position in which is parked an available car.
-* clicking on a pin, the details of that cars are showen: battery level and position. A button for reserving that car is showen.
-* A back button is available on the detail page
+* clicking on a pin, the details of that car are shown: battery level and position. A button for reserving that car is shown.
+* A back button is available on the detail page (comment: is it a step of the flow?)
 
 #### Exit conditions
-The user click on the button to reserve a car or to the back button.
+The user clicks on the button to reserve a car or to the back button. 
+(question: it seems to be the last step of the flow, shouldn't exit condition be the result of the flow of events considering RASD samples?)
+
+---
+
+### Name
+User starts using a car
+
+#### Actors
+User, system
+
+#### Entry Conditions
+The user has reserved a car and has reached it within one hour after the reservation
+
+#### Flow of events
+* The user arrives close to the car and notifies the system by clicking the Unlock button
+* The system verifies user position using GPS
+* The system checks last registered position of the car accessing to the third part data collector
+* After comparing the two positions if the difference results to be less than or equal to 10 meters the car unlocks
+* The user opens and starts the car
+
+#### Exit conditions
+No exit condition?
+
+#### Exceptions
+The user is not close to the car: the system denies the access to the car and provides a message to the user asking him to get closer in order to unlock.
+
+---
+
+### Name
+User finishes using the car
+
+#### Actors
+User, system
+
+#### Entry Conditions
+The user has started using a car
+
+#### Flow of events
+* The user parks the car, stops it and gets out of it.
+* The user clicks the End button to inform the system.
+* The system checks the position of the car and ensures it is in a safe parking area.
+* The system locks the car and marks it as available again.
+
+#### Exit conditions
+The system shows the user informations about his last trip, such as total price, taking into account collected discounts
+
+#### Exceptions
+The user is trying to park in a non-safe parking area: the system informs the user that he can't end the reservation and has to move the car in an allowed place.
 
 ---
 
@@ -83,12 +132,12 @@ Allow the user to reserve a car
 User, System
 
 #### Entry Conditions
-The user open the detail of a car on the map
+The user opens the detail of a car on the map
 
 #### Flow of events
-* In the detail of a car, the user press the button to reserve that car
-* The system mark that car as unavailable and start the countdown.
-* On the user application a new screen appear that shows the countdown, a button to release the car, a button to open the car. The car position is still shown.
+* In the detail of a car, the user presses the button to reserve that car
+* The system marks that car as unavailable and start the countdown.
+* On the user application a new screen appears that shows the countdown, a button to release the car, a button to open the car. The car position is still shown.
 
 #### Exit conditions
 
@@ -115,5 +164,5 @@ The client has parked the car.
 The system has received a message from the external payment system that the payment has been completed successfully.
 
 ####Exception
-The payment fails due to missing money on the credit card or blocked card. The system receive a failure message and communicate to the user a deadline for the payment and makes the user unable to reserve a car. If the user exceed the deadline, the system ban the account forever and delegate the problem to a debt collecting company.
+The payment fails due to missing money on the credit card or blocked card. The system receives a failure message and communicates to the user a deadline for the payment and makes the user unable to reserve a car. If the user exceeds the deadline, the system bans the account forever and delegates the problem to a debt collecting company.
 
