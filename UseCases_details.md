@@ -213,5 +213,8 @@ User will understand that the charging of machine is going to finish and it is n
 #### Exit conditions
 The user clicks on the button to reserve a Power Station or to the back button.
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
