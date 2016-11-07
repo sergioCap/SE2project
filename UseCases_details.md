@@ -213,8 +213,50 @@ User will understand that the charging of machine is going to finish and it is n
 #### Exit conditions
 The user clicks on the button to reserve a Power Station or to the back button.
 
-<<<<<<< HEAD
+---
 
+###Name
+System provides informations for money saving mode
 
-=======
->>>>>>> origin/master
+####Actors
+System, user
+
+####Entry Conditions
+The user is logged in.
+
+####Flow of events
+* The user enables the money saving option.
+* The user enters the final address.
+* The system checks entered address and looks for free power plugs in close stations (taking into account the distribution of cars in the city).
+* The system reserves the free power plug informing and external data collecting system.
+* The system provides the address and number of the slot reserved for the power supply.
+
+####Exit conditions
+The user sees informations of the slot and power station.
+
+####Exceptions
+The entered address does not exist or is out of the area: the system informs the user of the error and suggests to retry.
+No free slots available: the system informs the user that there are no charging slots available, so it suggests the userto retry later.
+
+---
+
+###Name
+The system has access to car infos
+
+####Actors
+System
+
+####Entry Conditions
+No entry conditions?
+
+####Flow of events
+* The system checks informations of the car
+* ???
+
+####Exit conditions
+???
+
+####Exceptions
+???
+
+---
