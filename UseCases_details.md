@@ -135,13 +135,31 @@ User, System
 The user opens the detail of a car on the map
 
 #### Flow of events
-* In the detail of a car, the user presses the button to reserve that car
+* Viewing the details of a car, the user notify that he want to reserve that car
 * The system marks that car as unavailable and start the countdown.
-* On the user application a new screen appears that shows the countdown, a button to release the car, a button to open the car. The car position is still shown.
+* On the user application sees the countdown, and he can notify that he want to release the car, or that he arrived close to the car and he want to open it. The car position is still shown.
 
 #### Exit conditions
 
 #### Exceptions
+
+---
+### Name
+Cancel a reservation
+
+#### Actors
+User, System
+
+#### Entry Conditions
+The user view the details of the car he reserved and the countdown
+
+#### Flow of events
+* The user notify that he want to cancel the reservation of that car
+* The system marks that car as available again and stops the countdown
+* The user is notified by the system ??
+
+#### Exit conditions
+The user view the map and can reserve another car
 
 ---
 
