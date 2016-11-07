@@ -16,6 +16,8 @@
 
 * A car can be reserved by only a person at a time.
 
+* Each car has a total of five seats.
+
 * A car is unavailable when it has less then 5% of battery level, or it is under maintenance or recharging, or it is already in use or reserved by another user. Otherwise, it is available and shown on the map to users.
 
 * The system has access to European Union driving licence databases to verify and approve user registration.
@@ -23,6 +25,8 @@
 * The system supports registration only by users having a European driving licence.
 
 * The system already knows all safe parking areas and identifies them by GPS coordinates.
+
+* The system knows the coordinates of all special parking areas.
 
 * The reservation of a car only ends if the user parks it in a safe parking area, otherwise the user keeps being charged
 

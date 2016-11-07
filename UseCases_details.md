@@ -236,20 +236,23 @@ System provides informations for money saving mode
 System, user
 
 ####Entry Conditions
-The user is logged in.
+The user has entered the car and chosen to use the money saving mode.
 
 ####Flow of events
-* The user enables the money saving option.
-* The user enters the final address.
+* The system asks the user for the final destination.
+* The user enters the address.
 * The system checks entered address and looks for free power plugs in close stations (taking into account the distribution of cars in the city).
-* The system reserves the free power plug informing and external data collecting system.
+* The system shows the result to the user asking for confirmation.
+* The user accepts to park in the stations selected by the system.
+* The system reserves the free power plug informing an external data collecting system.
 * The system provides the address and number of the slot reserved for the power supply.
 
 ####Exit conditions
-The user sees informations of the slot and power station.
+The user sees informations and directions to the slot and the power station.
 
 ####Exceptions
-The entered address does not exist or is out of the area: the system informs the user of the error and suggests to retry.
-No free slots available: the system informs the user that there are no charging slots available, so it suggests the userto retry later.
+The address entered by the user does not exist or is out of the area: the system informs the user of the error and suggests to retry.
+The user refuses to park in the suggested station: the system suggests to retry the search to find a better result.
+No free slots available: the system informs the user that there are no charging slots available, so it suggests the user to retry later.
 
 ---
