@@ -166,3 +166,52 @@ The system has received a message from the external payment system that the paym
 ####Exception
 The payment fails due to missing money on the credit card or blocked card. The system receives a failure message and communicates to the user a deadline for the payment and makes the user unable to reserve a car. If the user exceeds the deadline, the system bans the account forever and delegates the problem to a debt collecting company.
 
+
+
+### Name
+View Parking Area
+
+#### Actors
+User, System
+
+#### Entry Conditions
+User finishes using the car and is looking for a parking space
+
+#### Flow of events
+* (it's necessary that the system knows the position of the Parking Space and the User can see the free car    parking near his/her position.
+ (As sergio Said the system can checks user's position using GPS in order to find the parking Area )
+
+* view a map of the area around of the user position and show a pin with the symbol of a Parking in each position that there are free to use.
+* Clicking on a pin, the details of that parking are shown: the geographical position will be show
+* After clicking on the pin and deciding wheather is sutable to park , the user should click on the button to reserve the parking space
+* (I think after clicking on this button this space area should not be propose to other user since this had registerd)
+
+#### Exit conditions
+The user clicks on the button to reserve a Parking Area or to the back button. 
+
+
+
+
+### Name
+View Power Station
+
+#### Actors
+User, System
+
+#### Entry Conditions
+User will understand that the charging of machine is going to finish and it is neccassey to charge the machine, So the user should find a power Station.
+
+#### Flow of events
+* (it's necessary that the system knows the position of the Power Station and the User can see the nearest Power Station.
+(Like above the system can checks user's position using GPS in order to find the Power Station )
+
+* view a map of the area around of the user position and show a pin with the symbol of a Power Station in each position that there are free to use.
+* Clicking on a pin, the details of that Power Station Show: the geographical position will be show
+* After clicking on the pin and deciding wheather is sutable to charg  the machine , the user should click on the button to reserve the Power Station
+* (I think after clicking on this button this Power Station should not be propose to other user since this is using)
+
+#### Exit conditions
+The user clicks on the button to reserve a Power Station or to the back button.
+
+
+
