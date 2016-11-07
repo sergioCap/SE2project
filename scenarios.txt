@@ -1,4 +1,4 @@
-Scenario 1
+﻿Scenario 1
 Alice gets out with friends but when she wants to come back home there are no buses,
 so she decides to take a PowerEnjoy. She opens the application (she's already logged in)
 and on the map she checks for the closest available car. She finds some and she decides
@@ -7,8 +7,6 @@ presses the button to pickit up and after a few seconds the car opens. She start
 driving. When she arrives home, she parks in the first available parking space and
 presses the button to notify she's leaving the car. She closes the door and she waits
 till the car locks.
-
-unreserve possible?
 
 Scenario 2
 Rob has to go to a restaurant not easily reachable by public tranport.
@@ -19,3 +17,13 @@ a bus to get to the car. At that time there is too much road congestion in his
 town, and the bus is late. The battery of his mobile phone is low and when he gets
 off the bus his phone turns off. Now Rob will not be able neighter to pick up the car
 nor to unrent the car, then he will pay 1€ fee.
+
+Scenario 3
+Alex is at the restaurant with his girlfriend, and they're are eating the dessert. He know
+he will be out of the restaurant in half an hour, then he decides to have a look at the PowerEnjoy
+application on his phone. He notices that there is an available car just in front of the restaurant,
+then he immediately reserves it before someone else do it. When they pay the amount, Alex's girlfriend
+propose him to have a walk around there. Then Alex opens again the app and decide to cancel the reservation.
+
+Scenario 4
+the saver
