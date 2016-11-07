@@ -26,4 +26,16 @@ then he immediately reserves it before someone else do it. When they pay the amo
 propose him to have a walk around there. Then Alex opens again the app and decide to cancel the reservation.
 
 Scenario 4
-the saver
+Klarissa is a student and she like to save money. By night, even if busses are cheaper, she prefers
+to move by car because she thinks it will be safer. Like every weekend, she's out with her friends, and now
+it's time to get back home. Her friends don't live far from her, and since they are only in 4,
+she offer them to bring them all home too, this way she knows she will have the 10% off. 
+She find a car close to them and she reserve it. The car has the 40% of energy, then she will not
+receive this kind of discount but anyway it's enought to bring everyone home. When she get into the car, she activate
+the save mode, and then she enter his address. The system shows the possible special parking areas close 
+to her destination and she chose one that is just 300mt from home. The computer board inform her that it has
+reserved the charging columns 4 at the selected energy station. She drives her friends their own home and then she
+go to the selected power station and she plug the car. When she close the car [???] she get notified on her phone
+that she archieved a total discount of 40%, then she only spent 2€! Not bad!
+//but when she get out to plug the car close? //the save mode could be activated on the phone?
+//for the point e we keep the same discount of plugging the car or more?
