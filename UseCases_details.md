@@ -136,12 +136,16 @@ The user opens the detail of a car on the map
 
 #### Flow of events
 * Viewing the details of a car, the user notify that he want to reserve that car
+* The system checks if the car is still available
 * The system marks that car as unavailable and start the countdown.
 * On the user application sees the countdown, and he can notify that he want to release the car, or that he arrived close to the car and he want to open it. The car position is still shown.
 
 #### Exit conditions
+Countdown starts
 
 #### Exceptions
+When the user notify he want to reserve that car, if it is no longer available a message
+is shown on the user application.
 
 ---
 ### Name
