@@ -57,6 +57,27 @@ The user account does not exist, the system notifies the user and suggests to re
 ---
 
 ### Name
+manage personal info
+
+#### Actors
+User, System
+
+#### Entry Conditions
+The User has been logged in and decided to change the information.
+
+#### Flow of events
+
+* The user Click view the profile
+* The user input information if user would like to update profile
+* The user click Submit/Update Profile.
+* The system notify user by showing a message or through email.
+
+#### Exit conditions
+The user has deleted/updated successfully.
+
+---
+
+### Name
 View available cars on the map
 
 #### Actors
