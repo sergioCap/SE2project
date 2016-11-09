@@ -57,6 +57,27 @@ The user account does not exist, the system notifies the user and suggests to re
 ---
 
 ### Name
+manage personal info
+
+#### Actors
+User, System
+
+#### Entry Conditions
+The User has been logged in and decided to change the information.
+
+#### Flow of events
+
+* The user Click view the profile
+* The user input information if user would like to update profile
+* The user click Submit/Update Profile.
+* The system notify user by showing a message or through email.
+
+#### Exit conditions
+The user has deleted/updated successfully.
+
+---
+
+### Name
 View available cars on the map
 
 #### Actors
@@ -135,13 +156,35 @@ User, System
 The user opens the detail of a car on the map
 
 #### Flow of events
-* In the detail of a car, the user presses the button to reserve that car
+* Viewing the details of a car, the user notify that he want to reserve that car
+* The system checks if the car is still available
 * The system marks that car as unavailable and start the countdown.
-* On the user application a new screen appears that shows the countdown, a button to release the car, a button to open the car. The car position is still shown.
+* On the user application sees the countdown, and he can notify that he want to release the car, or that he arrived close to the car and he want to open it. The car position is still shown.
 
 #### Exit conditions
+Countdown starts
 
 #### Exceptions
+When the user notify he want to reserve that car, if it is no longer available a message
+is shown on the user application.
+
+---
+### Name
+Cancel a reservation
+
+#### Actors
+User, System
+
+#### Entry Conditions
+The user view the details of the car he reserved and the countdown
+
+#### Flow of events
+* The user notify that he want to cancel the reservation of that car
+* The system marks that car as available again and stops the countdown
+* The user is notified by the system ??
+
+#### Exit conditions
+The user view the map and can reserve another car
 
 ---
 
@@ -166,7 +209,7 @@ The system has received a message from the external payment system that the paym
 ####Exception
 The payment fails due to missing money on the credit card or blocked card. The system receives a failure message and communicates to the user a deadline for the payment and makes the user unable to reserve a car. If the user exceeds the deadline, the system bans the account forever and delegates the problem to a debt collecting company.
 
-
+---
 
 ### Name
 View Parking Area
@@ -179,15 +222,20 @@ User finishes using the car and is looking for a parking space
 
 #### Flow of events
 * The user can see the free car parking near his/her position throw GPS.
+<<<<<<< HEAD
 * The system will show some information about the position of this particular parking space. 
 * The user choose one of the car parkings by clicking on them. 
+=======
+* The system will show some information about the position of this particular parking space.
+* The user choose one of the car parkings by clicking on them.
+>>>>>>> origin/master
 * The user click on the button to reserve the parking space.
 * The system will change the status of this Parking as Reserved.
 
 #### Exit conditions
-The user clicks on the button to reserve a Parking Area or to the back button. 
+The user clicks on the button to reserve a Parking Area or to the back button.
 
-
+---
 
 
 ### Name
@@ -200,7 +248,10 @@ User, System
 User will understand that the charging of machine is going to finish and it is neccassey to charge the machine, So the user should find a power Station.
 
 #### Flow of events
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 * The user can see the nearest Power Station throw GPS.
 * the system can show some information about the position of Power Station.
 * The User choose one of the Power station.
@@ -210,5 +261,38 @@ User will understand that the charging of machine is going to finish and it is n
 #### Exit conditions
 The user clicks on the button to reserve a Power Station or to the back button.
 
+<<<<<<< HEAD
+=======
+---
 
+###Name
+System provides informations for money saving mode
 
+####Actors
+System, user
+>>>>>>> origin/master
+
+####Entry Conditions
+The user has entered the car and chosen to use the money saving mode.
+
+####Flow of events
+* The system asks the user for the final destination.
+* The user enters the address.
+* The system checks entered address and looks for free power plugs in close stations (taking into account the distribution of cars in the city).
+* The system shows the result to the user asking for confirmation.
+* The user accepts to park in the stations selected by the system.
+* The system reserves the free power plug informing an external data collecting system.
+* The system provides the address and number of the slot reserved for the power supply.
+
+<<<<<<< HEAD
+=======
+####Exit conditions
+The user sees informations and directions to the slot and the power station.
+
+####Exceptions
+The address entered by the user does not exist or is out of the area: the system informs the user of the error and suggests to retry.
+The user refuses to park in the suggested station: the system suggests to retry the search to find a better result.
+No free slots available: the system informs the user that there are no charging slots available, so it suggests the user to retry later.
+
+---
+>>>>>>> origin/master
