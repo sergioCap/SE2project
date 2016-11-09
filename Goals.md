@@ -8,7 +8,7 @@
 
 3. The user should be able to find available cars around him
 
-4. The user should see the status of a car before making a reservation
+4. The user should see the battery level of a car before making a reservation
 
 5. The user should be able to reserve a car
 

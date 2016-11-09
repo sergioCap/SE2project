@@ -15,14 +15,14 @@
 ---
 
 ###Name
-User registers to the system
+[G1] User registers to the system
 
 ####Actors
 User, system
 
 ####Flow of events
 * The user accesses the registerActivity of the application on his mobile phone.
-* The user fills all the fields, entering his personal data and ID cad and driving licence informations.
+* The user fills all the fields, entering his personal data and ID cad and driving licence information.
 * The user clicks the Confirm Registration button.
 * The system validates entered data comparing them with those of the external system and confirms the registration.
 * The system sends the password for the login on user email account and mobile phone.
@@ -31,12 +31,13 @@ User, system
 The user is redirected to the loginActivity
 
 ####Exceptions
-Entered data for the driving licence is not valid, the system notifies the users and suggests to enter correct data. User is not allowed to register until he enters correcct or valid informations.
+Entered data for the driving licence is not valid, the system notifies the users and suggests to enter correct data. User is not allowed to register until he enters correct or valid information.
+The user is already registered
 
 ---
 
 ###Name
-User logs in
+[G2] User logs in
 
 ####Actors
 User, system
@@ -57,7 +58,7 @@ The user account does not exist, the system notifies the user and suggests to re
 ---
 
 ### Name
-manage personal info
+[G8] manage personal info
 
 #### Actors
 User, System
@@ -78,7 +79,7 @@ The user has deleted/updated successfully.
 ---
 
 ### Name
-View available cars on the map
+[G3,G4] View available cars on the map
 
 #### Actors
 User, System
@@ -100,7 +101,7 @@ The user clicks on the button to reserve a car or to the back button.
 ---
 
 ### Name
-User starts using a car
+[G6] User starts using a car
 
 #### Actors
 User, system
@@ -124,7 +125,7 @@ The user is not close to the car: the system denies the access to the car and pr
 ---
 
 ### Name
-User finishes using the car
+[G6] User finishes using the car
 
 #### Actors
 User, system
@@ -147,7 +148,7 @@ The user is trying to park in a non-safe parking area: the system informs the us
 ---
 
 ### Name
-Allow the user to reserve a car
+[G5] Allow the user to reserve a car
 
 #### Actors
 User, System
@@ -170,7 +171,7 @@ is shown on the user application.
 
 ---
 ### Name
-Cancel a reservation
+[G7] Cancel a reservation
 
 #### Actors
 User, System
@@ -189,7 +190,7 @@ The user view the map and can reserve another car
 ---
 
 ###Name
-Money Charging
+[G9] Money Charging
 
 ####Participating actors
 System
@@ -222,13 +223,10 @@ User finishes using the car and is looking for a parking space
 
 #### Flow of events
 * The user can see the free car parking near his/her position throw GPS.
-<<<<<<< HEAD
 * The system will show some information about the position of this particular parking space. 
 * The user choose one of the car parkings by clicking on them. 
-=======
 * The system will show some information about the position of this particular parking space.
 * The user choose one of the car parkings by clicking on them.
->>>>>>> origin/master
 * The user click on the button to reserve the parking space.
 * The system will change the status of this Parking as Reserved.
 
@@ -236,7 +234,6 @@ User finishes using the car and is looking for a parking space
 The user clicks on the button to reserve a Parking Area or to the back button.
 
 ---
-
 
 ### Name
 View Power Station
@@ -248,10 +245,6 @@ User, System
 User will understand that the charging of machine is going to finish and it is neccassey to charge the machine, So the user should find a power Station.
 
 #### Flow of events
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 * The user can see the nearest Power Station throw GPS.
 * the system can show some information about the position of Power Station.
 * The User choose one of the Power station.
@@ -261,8 +254,6 @@ User will understand that the charging of machine is going to finish and it is n
 #### Exit conditions
 The user clicks on the button to reserve a Power Station or to the back button.
 
-<<<<<<< HEAD
-=======
 ---
 
 ###Name
@@ -270,7 +261,6 @@ System provides informations for money saving mode
 
 ####Actors
 System, user
->>>>>>> origin/master
 
 ####Entry Conditions
 The user has entered the car and chosen to use the money saving mode.
@@ -280,12 +270,10 @@ The user has entered the car and chosen to use the money saving mode.
 * The user enters the address.
 * The system checks entered address and looks for free power plugs in close stations (taking into account the distribution of cars in the city).
 * The system shows the result to the user asking for confirmation.
-* The user accepts to park in the stations selected by the system.
+* The user accepts to park in the station selected by the system.
 * The system reserves the free power plug informing an external data collecting system.
 * The system provides the address and number of the slot reserved for the power supply.
 
-<<<<<<< HEAD
-=======
 ####Exit conditions
 The user sees informations and directions to the slot and the power station.
 
@@ -295,4 +283,4 @@ The user refuses to park in the suggested station: the system suggests to retry 
 No free slots available: the system informs the user that there are no charging slots available, so it suggests the user to retry later.
 
 ---
->>>>>>> origin/master
+
