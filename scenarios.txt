@@ -39,3 +39,14 @@ go to the selected power station and she plug the car. When she close the car [?
 that she archieved a total discount of 40%, then she only spent 2€! Not bad!
 //but when she get out to plug the car close? //the save mode could be activated on the phone?
 //for the point e we keep the same discount of plugging the car or more?
+
+Scenario 5
+Omer is getting out of work when he noticed that is raining cats and dogs. Then he decided he would prefer to take
+a PowerEnjoy to get back home, if there is one nearby. He founds one and he reserve it. In a few minutes he is near
+the car, he open it and he drives home. Unfortunately he forgot that the credit card he connected to PowerEnjoy is almost
+empty and when he let the car close, the system notify him that the payments fails. The application shows him the total
+amount that he has to pay, the last four number of his credit card and the deadline for the payment. From now till when
+he pay the amount, he won't no longer able to reserve a car. 
+The day after he put some money into the card connected to PowerEnjoy, he go into the specific area for missing payment 
+of the application and ask to retry. This time the payment is successfull and the system notice him that he is again
+allowed to reserve a car.
