@@ -26,6 +26,10 @@ sig Licence {
 	valid: one Bool
 }
 
+fact allLicencesAreOwned {
+	User.licence = Licence
+}
+
 sig CreditCard {
 	valid: one Bool,
 	money: one Float
@@ -42,17 +46,19 @@ sig Person {
 */
 
 sig FiscalCode {
-	//user: User
+	user: lone User
 }
+
 
 fact noFiscalCodeWithoutUser {
-	//all f: FiscalCode, u: User | f in u.fiscalCode => u in f.user
+	all f: FiscalCode, u: User | f = u.fiscalCode <=> u = f.user
 }
 
+
 sig User { //extends Person {
-	licence: Licence,
+	licence: one Licence,
 	credit: CreditCard,
-	fiscalCode: FiscalCode,
+	fiscalCode: lone FiscalCode,
 	registered: one Bool, // irrelevant?
 	blocked: one Bool,
 	banned: one Bool
@@ -79,7 +85,7 @@ fact oneUserOneCar {
 }
 
 pred show() {
-#User = 1
+#User = 6
 }
 
 run show for 6
