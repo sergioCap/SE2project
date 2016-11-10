@@ -240,19 +240,16 @@ View Power Station
 
 #### Actors
 User, System
-
 #### Entry Conditions
 User will understand that the charging of machine is going to finish and it is neccassey to charge the machine, So the user should find a power Station.
 
 #### Flow of events
-* The user can see the nearest Power Station throw GPS.
-* the system can show some information about the position of Power Station.
-* The User choose one of the Power station.
-* The user click on the button to reserve the Power Station.
-* The system will change the status of this Parking as Reserved.
+* The user search for Power Station throw GPS.
+* the system will show all the power station with some information about the position of Power Station.
+
 
 #### Exit conditions
-The user clicks on the button to reserve a Power Station or to the back button.
+The user has decided to finished the searching with clicking on other buttons.
 
 ---
 
