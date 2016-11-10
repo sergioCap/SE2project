@@ -257,7 +257,7 @@ The user clicks on the button to reserve a Power Station or to the back button.
 ---
 
 ###Name
-System provides information for money saving mode
+System provides informationgit  for money saving mode
 
 ####Actors
 System, user

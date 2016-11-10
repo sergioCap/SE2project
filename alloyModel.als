@@ -3,23 +3,23 @@ open util/boolean
 //one sig True extends Bool
 //one sig False extends Bool
 
+sig Float {}
+
+sig Text {}
+
 sig Car {
-	plate: String,
+	plate: Text,
 	seats: Int,
 	available : one Bool,
-	energy: Int //real
+	energy: one Int //real
 } {
 	seats > 0
 	seats <= 5
 }
 
-fact plateIsUniqueForCar {
-	all c1, c2: Car | c1 != c2 => c1.plate != c2.plate
-}
-
 sig Coordinates {
-	longitude: Int, //float
-	latitude: Int //float
+	longitude: one Float, //float
+	latitude: one Float //float
 }
 
 sig Licence {
@@ -28,28 +28,46 @@ sig Licence {
 
 sig CreditCard {
 	valid: one Bool,
-	money: Int
+	money: one Float
 } {
-	money < 0 => valid = False
+	//money < 0 => valid = False
 }
 
-sig Person {}
+/*
+sig Person {
+	firstName: Text,
+	lastName: Text,
+	fiscalCode: Text
+}
+*/
 
-sig User {
-	personalData: Person,
+sig FiscalCode {
+	//user: User
+}
+
+fact noFiscalCodeWithoutUser {
+	//all f: FiscalCode, u: User | f in u.fiscalCode => u in f.user
+}
+
+sig User { //extends Person {
 	licence: Licence,
 	credit: CreditCard,
+	fiscalCode: FiscalCode,
 	registered: one Bool, // irrelevant?
 	blocked: one Bool,
 	banned: one Bool
-}
-
-fact usersAreUnique {
-	all u1, u2: User | u1 != u2 => u1.personalData != u2.personalData
-}
+} 
 
 sig Reservation {
 //	reservation: User -> Car
+}
+
+fact plateIsUniqueForCar {
+	all c1, c2: Car | c1 != c2 => c1.plate != c2.plate
+}
+
+fact usersAreUnique {
+	all u1, u2: User | u1 != u2 => u1.fiscalCode != u2.fiscalCode
 }
 
 fact noReservationIfNotValidCreditCard {
@@ -61,6 +79,7 @@ fact oneUserOneCar {
 }
 
 pred show() {
+#User = 1
 }
 
 run show for 6
