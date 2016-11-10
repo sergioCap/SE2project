@@ -213,25 +213,20 @@ The payment fails due to missing money on the credit card or blocked card. The s
 ---
 
 ### Name
-View Parking Area
+View Parking Areas
 
 #### Actors
 User, System
 
 #### Entry Conditions
-User finishes using the car and is looking for a parking space
+User has logged in.
 
 #### Flow of events
-* The user can see the free car parking near his/her position throw GPS.
-* The system will show some information about the position of this particular parking space. 
-* The user choose one of the car parkings by clicking on them. 
-* The system will show some information about the position of this particular parking space.
-* The user choose one of the car parkings by clicking on them.
-* The user click on the button to reserve the parking space.
-* The system will change the status of this Parking as Reserved.
+* The user clicks on the button to see Parking Areas.
+* The system shows on the map all the Parking Areas by highlighting them. 
 
 #### Exit conditions
-The user clicks on the button to reserve a Parking Area or to the back button.
+The user has decieded to finish the viewing of parking Area by clicking on other buttons.
 
 ---
 
@@ -240,12 +235,15 @@ View Power Station
 
 #### Actors
 User, System
+
 #### Entry Conditions
-User will understand that the charging of machine is going to finish and it is neccassey to charge the machine, So the user should find a power Station.
+User has logged in.
 
 #### Flow of events
-* The user search for Power Station throw GPS.
-* the system will show all the power station with some information about the position of Power Station.
+* The user clicks the button to see power stations.
+* The system shows on the map all the power stations.
+* The user clicks on the pin of one of the areas.
+* The system shows a list of the power plugs and their availability.
 
 
 #### Exit conditions
