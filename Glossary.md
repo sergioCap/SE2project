@@ -13,3 +13,5 @@
 * **User**: it is a person that is registered to the PowerEnjoy Service. It have to be older than 18, and have a valid driving licence to drive cars.
 * **App**: It is the short term we use to desine a mobile application.
 * **Energy Level**: it refers to the level of the battery of a car. It is shown on the car's dashboard.
+* **safe areas**:
+* **operator**:
