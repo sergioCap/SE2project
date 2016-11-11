@@ -24,7 +24,7 @@
 
 * The system supports registration only by users having a European driving licence.
 
-* The system already knows all safe parking areas and identifies them by GPS coordinates.
+* The system already knows all safe parking areas and identifies them by coordinates.
 
 * The system knows the coordinates of all special parking areas.
 
