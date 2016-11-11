@@ -8,18 +8,20 @@ sig Float {}
 sig Text {}
 
 sig Car {
-	plate: Text,
+	plate: one Text,
 	seats: Int,
 	available : one Bool,
-	energy: one Int //real
+	energy: one Int, //real
+	position: one Coordinates
 } {
 	seats > 0
 	seats <= 5
+	energy >= 0
 }
 
 sig Coordinates {
-	longitude: one Float, //float
-	latitude: one Float //float
+	longitude: one Int, //float
+	latitude: one Int //float
 }
 
 sig Licence {
@@ -31,22 +33,14 @@ fact allLicencesAreOwned {
 }
 
 sig CreditCard {
-	valid: one Bool,
-	money: one Float
+	valid: one Bool
+	//HasMoney: one Float
 } {
 	//money < 0 => valid = False
 }
 
-/*
-sig Person {
-	firstName: Text,
-	lastName: Text,
-	fiscalCode: Text
-}
-*/
-
 sig FiscalCode {
-	user: lone User
+	user: one User
 }
 
 
@@ -58,22 +52,37 @@ fact noFiscalCodeWithoutUser {
 sig User { //extends Person {
 	licence: one Licence,
 	credit: CreditCard,
-	fiscalCode: lone FiscalCode,
+	fiscalCode: one FiscalCode,
 	registered: one Bool, // irrelevant?
 	blocked: one Bool,
-	banned: one Bool
+	banned: one Bool,
+	position: Coordinates
 } 
 
 sig Reservation {
-//	reservation: User -> Car
+	user: one User,
+	car: one Car
+} {
+	user.blocked = False
+	user.banned = False
+	user.licence.valid = True
+	car.available = False
 }
 
 fact plateIsUniqueForCar {
 	all c1, c2: Car | c1 != c2 => c1.plate != c2.plate
 }
 
-fact usersAreUnique {
-	all u1, u2: User | u1 != u2 => u1.fiscalCode != u2.fiscalCode
+fact usersHaveUniqueFiscalCodeAndLicence {
+	all u1, u2: User | u1 != u2 => u1.fiscalCode != u2.fiscalCode && u1.licence != u2.licence
+}
+
+fact sameReservationDifferentUsers{
+	all r1, r2: Reservation | r1 != r2 => r1.user != r2.user && r1.car != r2.car
+}
+
+fact onlyUnavailableCarsShouldBeInReservation {
+	//no r: Reservation
 }
 
 fact noReservationIfNotValidCreditCard {
@@ -85,7 +94,8 @@ fact oneUserOneCar {
 }
 
 pred show() {
-#User = 6
+#User = 3
+#Reservation = 2
 }
 
 run show for 6
