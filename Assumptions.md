@@ -10,7 +10,7 @@
 
 * The system can always access to the real-time informations of the car, such as its position, the number of people inside it, the battery level and the on-charge status.
 
-* Special parking areas are only the ones with power plugs for charging cars.
+* Special parking areas are only the ones with power plugs for charging cars and are the only areas reserved for charging PowerEnjoy cars.
 
 * A user can use a car if and only if he has reserved it in advance.
 
@@ -24,7 +24,7 @@
 
 * The system supports registration only by users having a European driving licence.
 
-* The system already knows all safe parking areas and identifies them by GPS coordinates.
+* The system already knows all safe parking areas and identifies them by coordinates.
 
 * The system knows the coordinates of all special parking areas.
 
@@ -39,3 +39,7 @@
 * Recharge slots can result as available or unavailable and their status can be checked and set by a third part system after being requested by our system.
 
 * In case the company receives a fine concerning a bad user behaviour, the user is due to pay it, so the system pays it in advance and then charges the amount to the user.
+
+* The car is ignited using a power button functioning as a Start/Stop button.
+
+* Cars parked in special parking areas are plugged by the final user.
