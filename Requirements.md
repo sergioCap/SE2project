@@ -63,31 +63,27 @@ G10. After the ride the user should be able to inform the system that he is leav
 * If all is correct the system should lock the car and make it available again
 
 
-####SYSTEM GOALS
+#### OPERATOR GOALS
+
+
+#### NEED CLEANUP
 
 G11. Unavailable cars should not be displayed to users
-
 * The system should hide from the map unavailable cars for maintenance/low battery/other reasons
 
 
 G12. The system should show on the map cars that become available again
-
 * The system should verify the status of each unavailable car
 * If it has all the requirements to become available again it should be made visible to users on the map
 
 
 G13. A reserved car should become available if the user doesn't pick it up within one hour from the reservation
-
 * The system should run a countdown once the user makes the reservation
 * Once the countdown finishes, the system should make the car available again
 * The system should also carge 1EUR fee to the user and inform him on that
 
-
 G14. Only registered users should be allowed to see the map and reserve cars
-
 * The system should require a login to check the user before letting user access to all functions
 
-
 G15. Cars that are not in an usable status should be sent to maintenance
-
 * The system should check the status of a car and contact external operators if it needs to be recharged, moved or maintained

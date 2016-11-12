@@ -279,3 +279,7 @@ No free slots available: the system informs the user that there are no charging 
 
 ---
 
+
+
+#### OPERATOR GOALS
+
