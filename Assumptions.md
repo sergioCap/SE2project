@@ -18,6 +18,9 @@
 
 * Safe parking areas and special parking areas are already defined and identified by coordinates: the system is initialized at start-up time with such a set of areas.
 
+* Payments are made using credit cards.
+
+* We consider operators as already registered to the system.
 
 
 
@@ -44,7 +47,7 @@
 
 ###REQUIREMENTS
 
-* The system can always access to the real-time information of the car, such as its position, the number of people inside it, the battery level, the charging status and control unit information.
+* The system can always access to the real-time information of the car, such as its position, the number of people inside it, the battery level, the charging status and control unit information. Depending on this information, the system can manage the status of the car.
 
 
 * A user can use a car if and only if he has reserved it in advance.
