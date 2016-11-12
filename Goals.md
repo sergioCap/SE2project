@@ -22,14 +22,14 @@
 
 10. After the ride the user should be able to inform the system that he is leaving the car
 
-####SYSTEM GOALS
+
+#### OPERATOR GOALS
+
+
+#### NEED CLEANUP
 
 11. Unavailable cars should not be displayed to users
-
 12. The system should show on the map cars that become available again
-
 13. A reserved car should become available if the user doesn't pick it up within one hour from the reservation
-
 14. Only registered users should be allowed to see the map and reserve cars
-
 15. Cars that are not in an usable status should be sent to maintenance

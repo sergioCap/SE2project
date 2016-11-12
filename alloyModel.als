@@ -7,21 +7,26 @@ sig Float {}
 
 sig Text {}
 
+abstract sig BatteryLevel {}
+
+sig Low extends BatteryLevel {}
+
+sig High extends BatteryLevel {}
+
 sig Car {
 	plate: one Text,
 	seats: Int,
-	available : one Bool,
-	energy: one Int, //real
+	available: one Bool,
+	batteryLevel: one BatteryLevel,
 	position: one Coordinates
 } {
 	seats > 0
 	seats <= 5
-	energy >= 0
 }
 
 sig Coordinates {
-	longitude: one Int, //float
-	latitude: one Int //float
+	longitude: one Float,
+	latitude: one Float
 }
 
 sig Licence {
@@ -34,9 +39,6 @@ fact allLicencesAreOwned {
 
 sig CreditCard {
 	valid: one Bool
-	//HasMoney: one Float
-} {
-	//money < 0 => valid = False
 }
 
 sig FiscalCode {
@@ -49,11 +51,10 @@ fact noFiscalCodeWithoutUser {
 }
 
 
-sig User { //extends Person {
+sig User {
 	licence: one Licence,
 	credit: CreditCard,
 	fiscalCode: one FiscalCode,
-	registered: one Bool, // irrelevant?
 	blocked: one Bool,
 	banned: one Bool,
 	position: Coordinates
@@ -67,6 +68,11 @@ sig Reservation {
 	user.banned = False
 	user.licence.valid = True
 	car.available = False
+	car.batteryLevel = High
+}
+
+fact userBlockedIfCreditNotValid {
+	all u: User | u.credit.valid = False => u.blocked = True
 }
 
 fact plateIsUniqueForCar {
@@ -77,7 +83,7 @@ fact usersHaveUniqueFiscalCodeAndLicence {
 	all u1, u2: User | u1 != u2 => u1.fiscalCode != u2.fiscalCode && u1.licence != u2.licence
 }
 
-fact sameReservationDifferentUsers{
+fact sameReservationDifferentUserAndCar {
 	all r1, r2: Reservation | r1 != r2 => r1.user != r2.user && r1.car != r2.car
 }
 
@@ -94,11 +100,9 @@ fact oneUserOneCar {
 }
 
 pred show() {
-#User = 3
-#Reservation = 2
 }
 
-run show for 6
+run show for 4
 
 // pred userHasNoMoney => system suspends
 // pred carUnavailable
