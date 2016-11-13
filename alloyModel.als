@@ -80,7 +80,7 @@ sig ParkingArea{
 }
 
 sig SpecialParkingArea extends ParkingArea {
-	plugs: Int
+	plugs: some PowerPlug
 }
 
 sig PowerPlug {
@@ -88,7 +88,7 @@ sig PowerPlug {
 	plugNumber: Int
 }
 
-//********************************** FACTS********************************
+// FACTS
 
 fact powerEnjoyOwnsAll {
  	PowerEnjoySystem.users = User
@@ -141,11 +141,19 @@ fact sameReservationDifferentUserAndCar {
 	all r1, r2: Reservation | r1 != r2 => r1.user != r2.user && r1.car != r2.car
 }
 
-fact temp {
+fact lowBatteryCarUnderMaintenanceUnavailable {
 	 all c: Car | c.batteryLevel in Low => c.maintenance = True and c.available = False
 }
 
-//******************************Assertions************************
+fact plugIsInOneSpecialParking{
+	//all p: PowerPlug, s1,s2: SpecialParkingArea | p in s1.plugs => p not in s2.plugs
+}
+
+fact noPlugWithoutSpecial {
+	no p: PowerPlug | p not in SpecialParkingArea.plugs
+}
+
+// ASSERTIONS
 
 assert lowbatteryCarCannotBeReserved {
 	no r: Reservation | r.car.batteryLevel in Low
@@ -166,8 +174,9 @@ assert noValidCreditCardWhenTheUserIsBlocked {
 
 pred show() {
 	//#PowerEnjoySystem = 1
-	#ParkingArea = 2
-	#SpecialParkingArea = 1
+	#ParkingArea = 3
+	#SpecialParkingArea = 2
+	#Car = 3
 }
 
 run show for 3
