@@ -1,26 +1,26 @@
 ﻿Scenario 1
 Alice gets out with friends but when she wants to come back home there are no buses,
-so she decides to take a PowerEnjoy. She opens the application (she's already logged in)
+so she decides to take a PowerEnjoy car. She opens the application (she's already logged in)
 and on the map she checks for the closest available car. She finds some and she decides
 to reserve one, that's 10 min from her by feet. When she arrives at the car, she
 presses the button to pickit up and after a few seconds the car opens. She starts
 driving. When she arrives home, she parks in the first available parking space and
-presses the button to notify she's leaving the car. She closes the door and she waits
-till the car locks.
+presses the button to notify she's leaving the car. Since that parking space is in a safe are,
+the reservation is correctly concluded. She closes the door and she waits till the car locks.
 
 Scenario 2
 Rob has to go to a restaurant not easily reachable by public tranport.
-Then he decides to take a PowerEnjoy. He opens the app and he notifies that the closest
+Then he decides to take a PowerEnjoy car. He opens the app and he notifies that the closest
 available car is 10minutes from him by metro. He decides to take it anyway.
 Unlikely there are some traffic problems with the underground, then he decides to take 
 a bus to get to the car. At that time there is too much road congestion in his
 town, and the bus is late. The battery of his mobile phone is low and when he gets
 off the bus his phone turns off. Now Rob will not be able neighter to pick up the car
-nor to unrent the car, then he will pay 1€ fee.
+nor to cancel the reservation, then he will pay 1€ fee.
 
 Scenario 3
-Alex is at the restaurant with his girlfriend, and they're are eating the dessert. He know
-he will be out of the restaurant in half an hour, then he decides to have a look at the PowerEnjoy
+Alex is at the restaurant with his girlfriend, and they're are eating the dessert. He knows
+they will be out of the restaurant in half an hour, then he decides to have a look at the PowerEnjoy
 application on his phone. He notices that there is an available car just in front of the restaurant,
 then he immediately reserves it before someone else do it. When they pay the amount, Alex's girlfriend
 propose him to have a walk around there. Then Alex opens again the app and decide to cancel the reservation.
@@ -34,15 +34,15 @@ She find a car close to them and she reserve it. The car has the 40% of energy, 
 receive this kind of discount but anyway it's enought to bring everyone home. When she get into the car, she activate
 the save mode, and then she enter his address. The system shows the possible special parking areas close 
 to her destination and she chose one that is just 300mt from home. The computer board inform her that it has
-reserved the charging columns 4 at the selected energy station. She drives her friends their own home and then she
-go to the selected power station and she plug the car. When she close the car [???] she get notified on her phone
+reserved the charging columns 4 at the selected special parking area. She drives her friends their own home and then she
+go to the selected special parking area and she plug the car in the right energy tower. When she close the car [???] she get notified on her phone
 that she archieved a total discount of 40%, then she only spent 2€! Not bad!
 //but when she get out to plug the car close? //the save mode could be activated on the phone?
 //for the point e we keep the same discount of plugging the car or more?
 
 Scenario 5
 Omer is getting out of work when he noticed that is raining cats and dogs. Then he decided he would prefer to take
-a PowerEnjoy to get back home, if there is one nearby. He founds one and he reserve it. In a few minutes he is near
+a PowerEnjoy car to get back home, if there is one nearby. He founds one and he reserve it. In a few minutes he is near
 the car, he open it and he drives home. Unfortunately he forgot that the credit card he connected to PowerEnjoy is almost
 empty and when he let the car close, the system notify him that the payments fails. The application shows him the total
 amount that he has to pay, the last four number of his credit card and the deadline for the payment. From now till when

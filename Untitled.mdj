@@ -1190,13 +1190,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 150,
+											"left": 174,
 											"top": 257,
 											"width": 16.6181640625,
 											"height": 13,
 											"autoResize": false,
-											"alpha": -4.73279389856776,
-											"distance": 49.01020301937138,
+											"alpha": -4.752367433482427,
+											"distance": 25.019992006393608,
 											"hostEdge": {
 												"$ref": "AAAAAAFYS39oMYvKMmY="
 											},
@@ -4005,19 +4005,19 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 164,
-											"top": 942,
-											"width": 92.49169921875,
+											"left": 123,
+											"top": 943,
+											"width": 127.89892578125,
 											"height": 13,
 											"autoResize": false,
-											"alpha": -1.6243172297931643,
-											"distance": 56.08029957123981,
+											"alpha": -1.5957917485368653,
+											"distance": 80.02499609497022,
 											"hostEdge": {
 												"$ref": "AAAAAAFYT6CXJtzyMgo="
 											},
 											"edgePosition": 1,
 											"underline": false,
-											"text": " [Is a parking ? ]",
+											"text": " [Is it in a safe area ? ]",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5
 										},
@@ -6405,7 +6405,7 @@
 								"$ref": "AAAAAAFYT6BUB9zpEg4="
 							},
 							"visibility": "public",
-							"guard": "Is a parking ? "
+							"guard": "Is it in a safe area ? "
 						},
 						{
 							"_type": "UMLControlFlow",
