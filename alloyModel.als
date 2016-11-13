@@ -1,7 +1,4 @@
 open util/boolean
-//abstract sig Bool{}
-//one sig True extends Bool
-//one sig False extends Bool
 
 sig Float {}
 
@@ -18,7 +15,10 @@ sig Car {
 	seats: Int,
 	available: one Bool,
 	batteryLevel: one BatteryLevel,
-	position: one Coordinates
+	position: one Coordinates,
+	maintenance: one Bool,
+	assocMaintenance: lone Operator,
+	assignedToOperator: one Bool
 } {
 	seats > 0
 	seats <= 5
@@ -33,9 +33,6 @@ sig Licence {
 	valid: one Bool
 }
 
-fact allLicencesAreOwned {
-	User.licence = Licence
-}
 
 sig CreditCard {
 	valid: one Bool
@@ -44,12 +41,6 @@ sig CreditCard {
 sig FiscalCode {
 	user: one User
 }
-
-
-fact noFiscalCodeWithoutUser {
-	all f: FiscalCode, u: User | f = u.fiscalCode <=> u = f.user
-}
-
 
 sig User {
 	licence: one Licence,
@@ -69,6 +60,48 @@ sig Reservation {
 	user.licence.valid = True
 	car.available = False
 	car.batteryLevel = High
+	car.maintenance = False
+}
+
+sig Operator{
+	assocMaintenance: lone Car
+}
+
+one sig PowerEnjoy {
+	users: User,
+	operators: Operator,
+	cars: Car
+}
+
+//********************************** FACTS********************************
+
+fact {
+	PowerEnjoy.users = User
+	PowerEnjoy.operators = Operator
+	PowerEnjoy.cars = Car
+}
+
+fact noReservationWhenMaintenance {
+	all c:Car | c.maintenance =True => c.available=False
+	//all r: Reservation, c:Car | c.maintenance = True => r.car != c
+//	all o: Operator, r: Reservation, c:Car | o.assocMaintenance = c => r.car != c
+}
+
+fact eachUserShouldHaveCreaditCard {
+	all c: CreditCard, u: User | c = u.credit
+}
+
+fact allLicencesAreOwned {
+	User.licence = Licence
+}
+
+fact noFiscalCodeWithoutUser {
+	all f: FiscalCode, u: User | f = u.fiscalCode <=> u = f.user
+}
+
+fact assocMaintenance {
+	all c:Car, o:Operator |
+		((o in c.assocMaintenance) <=> (c in o.assocMaintenance))
 }
 
 fact userBlockedIfCreditNotValid {
@@ -100,9 +133,11 @@ fact oneUserOneCar {
 }
 
 pred show() {
+	#PowerEnjoy = 1
+	#Reservation=1
+	#CreditCard = 3
+	#User = 3
 }
 
 run show for 4
 
-// pred userHasNoMoney => system suspends
-// pred carUnavailable
