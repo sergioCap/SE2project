@@ -44,7 +44,7 @@ sig FiscalCode {
 
 sig User {
 	licence: one Licence,
-	credit: CreditCard,
+	credit: one CreditCard,
 	fiscalCode: one FiscalCode,
 	blocked: one Bool,
 	banned: one Bool,
@@ -67,28 +67,50 @@ sig Operator{
 	assocMaintenance: lone Car
 }
 
-one sig PowerEnjoy {
-	users: User,
-	operators: Operator,
-	cars: Car
+one sig PowerEnjoySystem {
+	users: some User,
+	operators: some Operator,
+	cars: some Car,
+	res: some Reservation,
+	parkingAreas: some ParkingArea
+}
+
+sig ParkingArea{
+	bounds: set Coordinates
+
+}
+
+sig SpecialParkingArea extends ParkingArea{
+	plugs: Int
+}
+
+sig EnergyTower{
+	status: one Bool,
+	towerNumber: Int
 }
 
 //********************************** FACTS********************************
 
-fact {
-	PowerEnjoy.users = User
-	PowerEnjoy.operators = Operator
-	PowerEnjoy.cars = Car
+fact powerEnjoyOwnsAll {
+ 	PowerEnjoySystem.users = User
+ 	PowerEnjoySystem.operators = Operator
+ 	PowerEnjoySystem.cars = Car
+ 	PowerEnjoySystem.res = Reservation
+	PowerEnjoySystem.parkingAreas = ParkingArea
 }
 
 fact noReservationWhenMaintenance {
-	all c:Car | c.maintenance =True => c.available=False
-	//all r: Reservation, c:Car | c.maintenance = True => r.car != c
-//	all o: Operator, r: Reservation, c:Car | o.assocMaintenance = c => r.car != c
+	all c:Car | c.maintenance = True => c.available=False
+	all r: Reservation, c:Car | c.maintenance = True => r.car != c
+	all o: Operator, r: Reservation, c:Car | o.assocMaintenance = c => r.car != c
 }
 
-fact eachUserShouldHaveCreaditCard {
-	all c: CreditCard, u: User | c = u.credit
+fact noCreditCardwithoutUser {
+	no c: CreditCard | c not in User.credit
+}
+
+fact noBatterywithoutCar {
+	no b: BatteryLevel | b not in Car.batteryLevel
 }
 
 fact allLicencesAreOwned {
@@ -120,24 +142,42 @@ fact sameReservationDifferentUserAndCar {
 	all r1, r2: Reservation | r1 != r2 => r1.user != r2.user && r1.car != r2.car
 }
 
-fact onlyUnavailableCarsShouldBeInReservation {
-	//no r: Reservation
+fact temp {
+	 all c: Car | c.batteryLevel in Low => c.maintenance = True and c.available = False
 }
 
-fact noReservationIfNotValidCreditCard {
-	// necessary?
+
+//******************************Assertion************************
+
+//Can a car with low battery be in a reservation?
+assert lowbatteryCarCannotBeReserved {
+ no r:Reservation | r.car.batteryLevel in Low
 }
 
-fact oneUserOneCar {
-	
+//Is it true that a car with low battery is unavailable, under maintenance and assigned to an operator?
+assert lowbatteryCarsAreUnavailable{
+	all c:Car | c.batteryLevel in Low =>c.available=False and c.maintenance=True
 }
+
+//Can we have a credit card not related to any user?
+assert UserWithoutCreditCard {
+		no c: CreditCard | c not in User.credit
+}
+
+// Is it true that if a user is banned or blocked his credit card is not valid?
+assert noValidCreditCardWhenTheUserIsBannedOrBlocked {
+	all c: CreditCard, u:User | c not in User.credit =>  u.blocked=False and u.banned=False
+}
+
 
 pred show() {
-	#PowerEnjoy = 1
-	#Reservation=1
-	#CreditCard = 3
-	#User = 3
+	//#PowerEnjoySystem = 1
 }
 
-run show for 4
+run show for 3
+
+check lowbatteryCarCannotBeReserved for 4
+check lowbatteryCarsAreUnavailable for 3
+check UserWithoutCreditCard for 4
+check noValidCreditCardWhenTheUserIsBannedOrBlocked for 4
 
