@@ -76,17 +76,16 @@ one sig PowerEnjoySystem {
 }
 
 sig ParkingArea{
-	bounds: set Coordinates
-
+	bounds: set Coordinates,
 }
 
-sig SpecialParkingArea extends ParkingArea{
+sig SpecialParkingArea extends ParkingArea {
 	plugs: Int
 }
 
-sig EnergyTower{
+sig PowerPlug {
 	status: one Bool,
-	towerNumber: Int
+	plugNumber: Int
 }
 
 //********************************** FACTS********************************
@@ -127,7 +126,7 @@ fact assocMaintenance {
 }
 
 fact userBlockedIfCreditNotValid {
-	all u: User | u.credit.valid = False => u.blocked = True
+	all u: User | u.blocked = True => u.credit.valid = False
 }
 
 fact plateIsUniqueForCar {
@@ -146,38 +145,33 @@ fact temp {
 	 all c: Car | c.batteryLevel in Low => c.maintenance = True and c.available = False
 }
 
+//******************************Assertions************************
 
-//******************************Assertion************************
-
-//Can a car with low battery be in a reservation?
 assert lowbatteryCarCannotBeReserved {
- no r:Reservation | r.car.batteryLevel in Low
+	no r: Reservation | r.car.batteryLevel in Low
 }
 
-//Is it true that a car with low battery is unavailable, under maintenance and assigned to an operator?
 assert lowbatteryCarsAreUnavailable{
-	all c:Car | c.batteryLevel in Low =>c.available=False and c.maintenance=True
+	all c: Car | c.batteryLevel in Low => c.available=False and c.maintenance=True
 }
 
-//Can we have a credit card not related to any user?
 assert UserWithoutCreditCard {
-		no c: CreditCard | c not in User.credit
+	no c: CreditCard | c not in User.credit
 }
 
-// Is it true that if a user is banned or blocked his credit card is not valid?
-assert noValidCreditCardWhenTheUserIsBannedOrBlocked {
-	all c: CreditCard, u:User | c not in User.credit =>  u.blocked=False and u.banned=False
+assert noValidCreditCardWhenTheUserIsBlocked {
+	all u: User | u.blocked=True =>  u.credit.valid=False
 }
 
 
 pred show() {
 	//#PowerEnjoySystem = 1
+	#ParkingArea = 2
+	#SpecialParkingArea = 1
 }
 
 run show for 3
-
 check lowbatteryCarCannotBeReserved for 4
 check lowbatteryCarsAreUnavailable for 3
 check UserWithoutCreditCard for 4
-check noValidCreditCardWhenTheUserIsBannedOrBlocked for 4
-
+check noValidCreditCardWhenTheUserIsBlocked for 4
