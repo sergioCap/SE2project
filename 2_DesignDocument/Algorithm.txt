@@ -1,0 +1,66 @@
+validateParking() {
+/* the user clicks on the button to confirm the parking.
+the system must check if the position of the car is inside a valid parking area */
+
+float longitude=car.getlongitude();
+float latitude=car.getlatitude();
+
+//we know the position of the ParkingAreas 
+
+Array[] CarPosition;
+CarPosition.Add(longitude,latitude);
+ListArray[] AllTheParkingAreasList;
+//There is a method to recognize whether this particular car is in the valid parking or not 
+
+foreach(parkingArea in AllTheParkingAreasList)
+{
+	bool CanPark=compare(ParkingArea,carPosition)
+	if (CanPark==True)
+		//The User Can Park
+	else    //OtherWise It is not a good place to Park     			
+}
+
+Bool YouCanPark=CheckTheValidation(CarPosition,AllTheParkingAreasList);
+	if(YouCanPark)
+	{
+		//The user can Park
+	}
+}
+
+calculateFinalAmount() {
+/* the system must calculate the final amount after the use of the car, 
+taking into account all the possible discounts */
+
+// We asuume if the user use the car for one hour the amount should be like (60Min*1Euro)=>60 Euro
+
+
+int TheAmountOfMoneyForEachMinutes = 1;
+float ThePriceForEachPercantageOfElectricity = 1.5;
+
+int TimeUsed = car.GetHowlongUsed().Minutes();
+int ElectricityUsed = car.GettheElectricityUsed();
+
+var Result1 = TimeUsed * TheAmountofMoneyForEachMinutes;
+var Result2 = ElectricityUsed * ThePriceForEachPercantageOfElectricity;
+
+var TheFinalAmountWithoutDiscount = Result1 + Result2;
+
+//************Discount
+
+//-10% off if the car has at least two other passengers;
+TheFinalAmountWithoutDiscount = (TheFinalAmountWithoutDiscount) * 90 / 100;
+
+//-20% off if the car is left with more than 50% of the battery;
+
+if(car.GetTheElectricityUsed() > 50 )
+	TheFinalAmountWithoutDiscount = (TheFinalAmountWithoutDiscount) * 80 / 100;
+
+//If the User Park the car in the specific ParkingArea it includes the discount
+var DiscountForParkingArea=20;
+TheFinalAmountWithoutDiscount = (TheFinalAmountWithoutDiscount) * 20 / 100;
+
+//-30% if the car is parked and the users plugs it into the power grid;
+if(car.Parked())
+	TheFinalAmountWithoutDiscount = (TheFinalAmountWithoutDiscount) * 30 / 100;	
+
+}
