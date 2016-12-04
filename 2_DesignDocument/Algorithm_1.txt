@@ -1,0 +1,58 @@
+// the user is requesting the list of available cars
+function retrieveCarList(User u) {
+	Map map = System.getMap();
+	// we retrieve the list of cars that are within 2km
+	float maxLat = u.getLatitude() + kmToDegrees(2);
+	float minLat = u.getLatitude() - kmToDegrees(2);
+	float maxLon = u.getLongitude() + kmToDegrees(2);
+	float minLon = u.getLongitude() - kmToDegrees(2);
+	array[] cars = DB.selectQuery('select * from CAR where available is true Latitude>='+minLat+' and Latitude<='+maxLat+' and Longitude>='+minLon+' and Longitude<='+maxLon);
+	foreach (car in cars) { // loop showing pin on the map for each available car
+		float lat = car.getLatitude();
+		float lon = car.getLongitude();
+		map.addPin(lat, lon);
+	}
+	map.showPins();
+}
+
+
+// the user has already reserved a car and is reaching it
+function checkDistanceBetweenUserAndCar(User user, Car car) {
+	//float longDiff = abs(user.getLongitude() - car.getLongitude());
+	//float latDiff = abs(user.getLatitude() - car.getLatitude());
+	distance = checkDistanceBetween(user, car);
+	if (distance < 10) {
+		car.unlock();
+		return true;
+	} else {
+		System.sendError(REFUSE_REQUEST);
+		return false;
+	}
+}
+
+// used in many cases (distance btw user and car, distance btw car and power station, ...)
+function checkDistanceBetween(Object elem1, Object elem2) {
+	float long = abs(elem1.getLongitude() - elem2.getLongitude());
+	float lat = abs(elem1.getLatitude() - elem2.getLatitude());
+	distance = sqrt(long^2+lat^2); // Euclidean distance
+	return distance;
+}
+
+
+// the system has to find and reserve a free plug
+function findFreeSlotForMoneySavingOption(User user, Address addr) {
+	Slot slot = null;
+	float longitude = user.getLongitude();
+	float latitude = user.getLatitude();
+	PowerStations ps = System.getPowerStations();
+	List sortedPS = ps.sortByDistance(add.getLatitude(), addr.getLongitude());
+	// Calculate average of cars in power stations
+	array[] carNumber = DB.selectQuery('select distinct stationID, count(carID) from PowerStation join Car where car.available is true');
+	float average = avg(carNumber);
+	foreach (station in sortedPS) {
+		if station.getParkedCars().length < average and station.getFreeSlots().length > 0 {
+			slot = station.reserveFreeSlot();
+		}
+	} 
+	return slot;
+}
