@@ -1,0 +1,8 @@
+The organization of our system in component is done in such a way that it would be easily possible in future to substitute some components with other, maintaing the same interfaces. 
+
+In our system, the business logic layer is composed of two macro components :the controller that contains all those components that manage the logic of the application, and the model that contains, manage and access data. 
+The controller component is composed of a Web service component whose main aim is to respond to all the requests that came from the presentation layer, and to do so it can access the model and the other controller component: it's the mais component of the system application. [necessary to explain the others] 
+The model follow the DAO design pattern, so it is composed by some DTO components that contains data and their respective DAO components that manage the interaction and changes of the DTO on the DB. 
+
+The business logic layer communicates with a Data Access component and a DB component. 
+The data access component has the responsibility to interact with the elements in the real world, such that cars and power plug. It is composed by a web service that simplify and incasinate the access to data exposing some API. From one side, the business logic layer interact with the data access layer by the access data web service, while from the other side it directly query the database that contains all the information that came from the real word. This database is populated by a system that is capable to "understand" the informations sent by the electrical components of the real world elements. 
