@@ -883,178 +883,6 @@
 						},
 						{
 							"_type": "UMLComponentInstanceView",
-							"_id": "AAAAAAFY2iq6Cdn94ps=",
-							"_parent": {
-								"$ref": "AAAAAAFF+qBtyKM79qY="
-							},
-							"model": {
-								"$ref": "AAAAAAFY2iq6CNn7iPk="
-							},
-							"subViews": [
-								{
-									"_type": "UMLNameCompartmentView",
-									"_id": "AAAAAAFY2iq6Cdn+4Aw=",
-									"_parent": {
-										"$ref": "AAAAAAFY2iq6Cdn94ps="
-									},
-									"model": {
-										"$ref": "AAAAAAFY2iq6CNn7iPk="
-									},
-									"subViews": [
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAFY2iq6Ctn/d7o=",
-											"_parent": {
-												"$ref": "AAAAAAFY2iq6Cdn+4Aw="
-											},
-											"visible": true,
-											"enabled": true,
-											"lineColor": "#000000",
-											"fillColor": "#d8d8ff",
-											"fontColor": "#000000",
-											"font": "Arial;13;0",
-											"showShadow": true,
-											"containerChangeable": false,
-											"containerExtending": false,
-											"left": 1089,
-											"top": 253,
-											"width": 178,
-											"height": 13,
-											"autoResize": false,
-											"underline": false,
-											"text": "«artifact»",
-											"horizontalAlignment": 2,
-											"verticalAlignment": 5
-										},
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAFY2iq6CtoAMfI=",
-											"_parent": {
-												"$ref": "AAAAAAFY2iq6Cdn+4Aw="
-											},
-											"visible": true,
-											"enabled": true,
-											"lineColor": "#000000",
-											"fillColor": "#d8d8ff",
-											"fontColor": "#000000",
-											"font": "Arial;13;1",
-											"showShadow": true,
-											"containerChangeable": false,
-											"containerExtending": false,
-											"left": 1089,
-											"top": 268,
-											"width": 178,
-											"height": 13,
-											"autoResize": false,
-											"underline": true,
-											"text": "Servers",
-											"horizontalAlignment": 2,
-											"verticalAlignment": 5
-										},
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAFY2iq6CtoBLBQ=",
-											"_parent": {
-												"$ref": "AAAAAAFY2iq6Cdn+4Aw="
-											},
-											"visible": false,
-											"enabled": true,
-											"lineColor": "#000000",
-											"fillColor": "#d8d8ff",
-											"fontColor": "#000000",
-											"font": "Arial;13;0",
-											"showShadow": true,
-											"containerChangeable": false,
-											"containerExtending": false,
-											"left": -16,
-											"top": 0,
-											"width": 73.67724609375,
-											"height": 13,
-											"autoResize": false,
-											"underline": false,
-											"text": "(from Model)",
-											"horizontalAlignment": 2,
-											"verticalAlignment": 5
-										},
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAFY2iq6CtoCTYE=",
-											"_parent": {
-												"$ref": "AAAAAAFY2iq6Cdn+4Aw="
-											},
-											"visible": false,
-											"enabled": true,
-											"lineColor": "#000000",
-											"fillColor": "#d8d8ff",
-											"fontColor": "#000000",
-											"font": "Arial;13;0",
-											"showShadow": true,
-											"containerChangeable": false,
-											"containerExtending": false,
-											"left": -16,
-											"top": 0,
-											"width": 0,
-											"height": 13,
-											"autoResize": false,
-											"underline": false,
-											"horizontalAlignment": 1,
-											"verticalAlignment": 5
-										}
-									],
-									"visible": true,
-									"enabled": true,
-									"lineColor": "#000000",
-									"fillColor": "#d8d8ff",
-									"fontColor": "#000000",
-									"font": "Arial;13;0",
-									"showShadow": true,
-									"containerChangeable": false,
-									"containerExtending": false,
-									"left": 1084,
-									"top": 248,
-									"width": 188,
-									"height": 38,
-									"autoResize": false,
-									"stereotypeLabel": {
-										"$ref": "AAAAAAFY2iq6Ctn/d7o="
-									},
-									"nameLabel": {
-										"$ref": "AAAAAAFY2iq6CtoAMfI="
-									},
-									"namespaceLabel": {
-										"$ref": "AAAAAAFY2iq6CtoBLBQ="
-									},
-									"propertyLabel": {
-										"$ref": "AAAAAAFY2iq6CtoCTYE="
-									}
-								}
-							],
-							"visible": true,
-							"enabled": true,
-							"lineColor": "#000000",
-							"fillColor": "#d8d8ff",
-							"fontColor": "#000000",
-							"font": "Arial;13;0",
-							"showShadow": true,
-							"containerChangeable": true,
-							"containerExtending": false,
-							"left": 1064,
-							"top": 248,
-							"width": 208,
-							"height": 49,
-							"autoResize": false,
-							"stereotypeDisplay": "label",
-							"showVisibility": true,
-							"showNamespace": false,
-							"showProperty": true,
-							"showType": true,
-							"nameCompartment": {
-								"$ref": "AAAAAAFY2iq6Cdn+4Aw="
-							},
-							"wordWrap": false
-						},
-						{
-							"_type": "UMLComponentInstanceView",
 							"_id": "AAAAAAFY2irW6NoWdok=",
 							"_parent": {
 								"$ref": "AAAAAAFF+qBtyKM79qY="
@@ -1088,8 +916,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1089,
-											"top": 373,
+											"left": 1097,
+											"top": 301,
 											"width": 178,
 											"height": 13,
 											"autoResize": false,
@@ -1113,13 +941,13 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 1089,
-											"top": 388,
+											"left": 1097,
+											"top": 316,
 											"width": 178,
 											"height": 13,
 											"autoResize": false,
 											"underline": true,
-											"text": "MTSapplication",
+											"text": "IBM WebSphere",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5
 										},
@@ -1138,8 +966,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": -16,
-											"top": 32,
+											"left": 0,
+											"top": -112,
 											"width": 73.67724609375,
 											"height": 13,
 											"autoResize": false,
@@ -1163,8 +991,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": -16,
-											"top": 32,
+											"left": 0,
+											"top": -112,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -1182,8 +1010,8 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1084,
-									"top": 368,
+									"left": 1092,
+									"top": 296,
 									"width": 188,
 									"height": 38,
 									"autoResize": false,
@@ -1210,8 +1038,8 @@
 							"showShadow": true,
 							"containerChangeable": true,
 							"containerExtending": false,
-							"left": 1064,
-							"top": 368,
+							"left": 1072,
+							"top": 296,
 							"width": 208,
 							"height": 49,
 							"autoResize": false,
@@ -1463,7 +1291,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": true,
-											"text": "MySql",
+											"text": "IBM DB2",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5
 										},
@@ -2995,7 +2823,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "MTSapplication",
+					"name": "IBM WebSphere",
 					"stereotype": "artifact",
 					"visibility": "public"
 				},
@@ -3052,7 +2880,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "MySql",
+					"name": "IBM DB2",
 					"stereotype": "artifact",
 					"visibility": "public"
 				}
