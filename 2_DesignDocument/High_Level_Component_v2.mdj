@@ -375,7 +375,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Application Server",
+											"text": "Central Application",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -663,7 +663,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Database Server",
+											"text": "Persistence",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -978,7 +978,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Database Server)",
+											"text": "(from Persistence)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1840,11 +1840,11 @@
 											"containerExtending": false,
 											"left": 432,
 											"top": 96,
-											"width": 143.76806640625,
+											"width": 147.38623046875,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Application Server)",
+											"text": "(from Central Application)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -2778,7 +2778,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFYxU3UFYc6GD4="
 					},
-					"name": "Database Server",
+					"name": "Persistence",
 					"ownedElements": [
 						{
 							"_type": "UMLComponent",
@@ -2834,7 +2834,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFYxU3UFYc6GD4="
 					},
-					"name": "Application Server",
+					"name": "Central Application",
 					"ownedElements": [
 						{
 							"_type": "UMLComponent",
