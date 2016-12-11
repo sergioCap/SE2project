@@ -1,0 +1,12 @@
+Architectural Styles
+Our System will implement a "Client-Server" architecture, where The "Client" is represented by the users and the operators mobile applications, and The "Server" is represented by the Central Application, and the Persistent component (see Component diagram). This allow us to have all the logic of the application and the data centralized and under control and to have a Thin-Client whose only task is to make request to the server, and to show the answer in a proper way.
+
+The Server-side application will use Java EE 7 as programming language.
+
+The Central Application will run on IBM WebSphere Application Server (Liberty profile) that is a flexible application server that fully supports Java EE 7 and that also allows the integration with Open Source software.
+IBM WebSphere Application Server (Liberty profile) will also run on the Database Server, together with an IBM DB2 DBMS.
+As described in component view, the controller has access to data through DAO Components. Each DAO component directly connects to the Database by JDBC.
+
+All the cars are equipped by Green e-Box (GEB), a device that provides an hardware/software interface to easily interact with the car. [*POLIMI].
+
+Communication between the mobile applications and the webService is done through json.
