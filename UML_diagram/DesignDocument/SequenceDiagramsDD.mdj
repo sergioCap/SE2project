@@ -5744,7 +5744,7 @@
 											},
 											"edgePosition": 1,
 											"underline": false,
-											"text": "1 : lockCar(carId,userPos)",
+											"text": "1 : lockCar(carId)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -6116,7 +6116,7 @@
 											},
 											"edgePosition": 1,
 											"underline": false,
-											"text": "2 : lockCar(carId,userPos)",
+											"text": "2 : lockCar(carId)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -9788,7 +9788,7 @@
 							},
 							"visibility": "public",
 							"messageSort": "synchCall",
-							"arguments": "carId,userPos",
+							"arguments": "carId",
 							"isConcurrentIteration": false
 						},
 						{
@@ -9806,7 +9806,7 @@
 							},
 							"visibility": "public",
 							"messageSort": "synchCall",
-							"arguments": "carId,userPos",
+							"arguments": "carId",
 							"isConcurrentIteration": false
 						},
 						{
