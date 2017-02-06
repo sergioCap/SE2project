@@ -1,0 +1,58 @@
+CASE 1
+The user opens the app and registers to the system
+the user enters the credit card number correctly
+the user receives a password by email
+
+
+CASE 2
+the user logs into the system entering his credentials
+the user enables GPS on his device to see available cars around
+the user picks one car
+a countdown on the screen starts to notice the user about the hour he has to reach the car
+the user reaches the car within the hour
+the user asks the system to unlock the car
+the system checks the distance between the user and the car (using gps)
+the system unlocks the car
+the user turns on the car
+a counter starts showing the charge
+the user parks the car in a safe area
+the user leaves the car
+the system charges the user
+the system locks the car
+
+
+
+CASE 3
+the user logs into the system entering his credentials
+the user enables GPS on his device to see available cars around
+the user picks one car
+a countdown on the screen starts to notice the user about the hour he has to reach the car
+the user exceeds the time limit
+the countdown ends
+the user is charged for 1EUR of fee
+the car is available again
+
+---Erica---
+
+Actor "User" use cases:
+	1. register
+	2. login
+	3. reserve a car
+	4. use a car
+	5. release a car
+	6. park
+	7. view available cars
+	8. view parking area
+	9. view power station
+	10. view energy level of a car
+	11. access money saving mode
+
+Actor "Management System" use cases:
+	1. provide information for money saving mode
+	2. calculate and apply discounts
+	3. pickup money
+	4. access cars informations
+		a. gps info
+		b. numer of person in the car
+		c. evergy level info
+
